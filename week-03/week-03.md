@@ -1,4 +1,4 @@
-### Sheha Luthfi Annisa | Back-End Development
+### Sheha Luthfi Annisa | Back-End Development | Week 03
 
 ## **Javascript - Array**
 
