@@ -399,7 +399,7 @@ Proses yang gabisa diselat
 1. Callback
    Callback : function yg dijadikan sebagai argumen
    Ketika sesuatu memerlukan waktu yang lama, maka dia akan masuk kedalam callback queue lalu menjalankan proses yang berada di belakangnya. Jika proses yg belakang sudah selesai, maka engine akan memeriksa yang ada didalam callback queue untuk dijalankan.
-   ![callback](1.png)
+   <br> ![callback](1.png)
 
 Contoh
 
