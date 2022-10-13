@@ -25,7 +25,7 @@
 4. Menggunakan media query
 <br> Membuat beberapa style bergantung pada jenis device
 <br> Kata kunci : @media. Contoh :
-```
+```javascript
 @media (max-width: 500px) {
 }
 ```
@@ -85,3 +85,5 @@
    - Images
    - Tables
    - Figures
+
+##### Info : link bootstrap https://getbootstrap.com/
