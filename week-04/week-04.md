@@ -41,12 +41,34 @@
 - Kapan menggunakan bootstrap?
 <br> ketika kita ingin membuat website kita menjadi responsif dengan cara yang simple karena sudah ada templatenya dan tinggal dicopy paste untuk digunakan
 - Layout pada bootstrap
-1. / menggunakan CDN dibagian download, dicopy dan dipaste dibagian <head> /
-2. Breakpoint :
-3. Containers : layout basicnya bootstarp
-4. Grid : menyediakan 12 kolom system
-5. Columns : mengatur urutan posisi dan align
-• Content pada bootstrap
-• Component
-1. 
-• Website responsif menggunakan bootstrap
+1. Breakpoint : sebagai acuan untuk menyesuaikan tampilan dalam berbagai ukuran viewport. Beberapa breakpoint pada bootstrap 5 sm, md, lg, xl, xxl
+2. Containers : layout basicnya bootstarp
+   - Default Container
+     <br> Class container memiliki sifat yang responsive dan fixed-width, yang berarti lebarnya akan berubah pada setiap breakpoint
+     ```javascript
+     <div class="container">
+     <!-- Content here -->
+     </div>
+     ```
+   - Fluid Container
+     <br> Class container-fluid memiliki lebar yang sama dengan viewport
+     ```javascript
+     <div class="container-fluid">
+     <!-- Content here -->
+     </div>
+     ``` 
+   - Responsive Container
+     ```
+     <div class="container-sm">100% wide until small breakpoint</div>
+     <div class="container-md">100% wide until medium breakpoint</div>
+     <div class="container-lg">100% wide until large breakpoint</div>
+     <div class="container-xl">100% wide until extra large breakpoint</div>
+     <div class="container-xxl">100% wide until extra extra large breakpoint</div>
+     ```
+3. Grid : menyediakan 12 kolom system
+<br> Grid system membagi lebar halaman menjadi 12 bagian. Sehingga apabila menggunakan class col-8, maka lebarnya akan menjadi 8/12 atau 2/3 dari lebar halaman.
+5. Columns
+<br> mengatur urutan posisi dan align
+- Content pada bootstrap
+- Component pada bootstrap
+- Website responsif menggunakan bootstrap
