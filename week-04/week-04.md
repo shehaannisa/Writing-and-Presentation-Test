@@ -69,6 +69,19 @@
 <br> Grid system membagi lebar halaman menjadi 12 bagian. Sehingga apabila menggunakan class col-8, maka lebarnya akan menjadi 8/12 atau 2/3 dari lebar halaman.
 5. Columns
 <br> mengatur urutan posisi dan align
-- Content pada bootstrap
 - Component pada bootstrap
-- Website responsif menggunakan bootstrap
+<br> beberapa component pada bootstrap 5
+   - Alerts
+   - Breadcrumb
+   - Buttons
+   - Card
+   - Modal
+   - Navbar
+   - Navs & tabs
+   - Pagination
+- Content pada bootstrap
+   - Reboot
+   - Typography
+   - Images
+   - Tables
+   - Figures
