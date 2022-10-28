@@ -4,5 +4,5 @@
 ### Atribut
 >berfungsi untuk mendeskripsikan karakteristik dari entitas tersebut. Simbol dari atribut adalah elips
 ### Membuat Design Database
-1. Menggunakan website/aplikasi flowchart, contohnya : aplikasi atau website draw.io
+1. Menggunakan website/aplikasi pembuat, contohnya : aplikasi atau website draw.io
 ![membuat flowchart](week-05-pict01.png)
