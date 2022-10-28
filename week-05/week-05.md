@@ -1,4 +1,8 @@
 ## Design Database with MySQL
 ### Entity / Entitas
->adalah 
-![membuat file](5.png)
+>adalah kumpulan objek yang dapat diidetifikasikan secara unik atau berbeda. Biasanya simbol dari entitas adalah persegi panjang
+### Atribut
+>berfungsi untuk mendeskripsikan karakteristik dari entitas tersebut. Simbol dari atribut adalah elips
+### Membuat Design Database
+1. Menggunakan website/aplikasi flowchart, contohnya : aplikasi atau website draw.io
+![membuat flowchart](week-05-pict01.png)
