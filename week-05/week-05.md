@@ -21,4 +21,4 @@
   - Entitas dosen memiliki 4 atribut : NIP (primary key), nama_dosen, alamat_dosen, dan ttl_dosen
   >Primary key adalah sesuatu yang isinya tidak akan sama dengan yang lain. Contohnya NIM mahasiswa satu dengan mahasiswa lain tidak sama, pasti berbeda-beda
 2. Relationship/Relasi Entity Keseluruhan
-<br>![membuat flowchart](week-05-pict02.png)
+<br>![membuat flowchart](week-05-pict002.png)
