@@ -7,3 +7,4 @@
 1. Menggunakan website/aplikasi pembuat diagram, contohnya : aplikasi atau website draw.io
 ![membuat flowchart](week-05-pict01.png)
 >Penjelasan :
+- Ada 4 entitas yaitu : Kelas, Mata Kuliah, Mahasiswa, dan Dosen
