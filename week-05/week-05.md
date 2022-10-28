@@ -14,3 +14,9 @@
   - 1 kelas dapat digunakan oleh 1 mata kuliah -> relasinya adalah one to one
   - 1 dosen dapat mengajar banyak/beberapa mahasiswa -> relasinya adalah one to many
   - 1 mahasiswa dapat mengambil beberapa mata kuliah | 1 mata kuliah dapat diambil oleh beberapa mahasiswa -> relasinya adalah many to many
+- Atribut :
+  - Entitas kelas memiliki 4 atribut : kode_kelas(sebagai primary key), lantai_kelas, kapasitas, dan lokasi
+  - Entitas mata kuliah memiliki 4 atribut : kode_matkul (primary key), jumlah_SKS, nama_matkul, dan deskripsi_matkul
+  - Entitas mahasiswa memiliki 4 atribut : NIM (primary key), nama_mhs, fakultas, dan prodi
+  - Entitas dosen memiliki 4 atribut : NIP (primary key), nama_dosen, alamat_dosen, dan ttl_dosen
+  >Primary key adalah sesuatu yang isinya tidak akan sama dengan yang lain. Contohnya NIM mahasiswa satu dengan mahasiswa lain tidak sama, pasti berbeda-beda
