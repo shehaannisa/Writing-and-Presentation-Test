@@ -272,7 +272,7 @@ npm install --save-dev nodemon
 
 ### Basic Syntax ExpressJS
 
-![screenshot ExpressJS](ExpressJS.png)
+![screenshot ExpressJS](ExpressJS.PNG)
 diatas adalah basic syntax dari express JS. Kita akan menggunakan module express yang berisi routing dan listen.
 - Basic Routes
 
