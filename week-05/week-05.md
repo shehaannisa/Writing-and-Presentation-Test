@@ -270,6 +270,198 @@ Express.js adalah framework back end. Artinya, ia bertanggung jawab untuk mengat
 npm install --save-dev nodemon
 ```
 
+### Basic Syntax ExpressJS
+
+![screenshot ExpressJS](ExpressJS.png)
+diatas adalah basic syntax dari express JS. Kita akan menggunakan module express yang berisi routing dan listen.
+- Basic Routes
+
+    Routes adalah sebuah end point yang diapat kita akses menggunakan URL di website. Didalam routes kita perlu menentukan method API, alamat dan response apa saja yang akan dikeluarkan
+
+    ![screenshot ExpressJS(2)](ExpressJS(2).PNG)
+
+    Kita bisa menjalankan aplikasi sederhana kita dengan cara menggunakan “node”. Dan aplikasi kita akan berjalan di alamat ‘http://localhost:3000’
+    
+    Kemudian kita dapat mengaksesnya di website dan menambah route yang akan kita akses yaitu “/”
+
+    ![screenshot ExpressJS(3)](ExpressJS(3).PNG)
+### Method ExpressJS
+
+Kita dapat menggunakan method dalam REST API seperti `GET`,`POST`, `PUT`, `PATCH` dan `DELETE`
+
+### Response ExpressJS
+
+Kita dapat mengirim response berupa output json yang biasa dipakai untuk back end application. Dengan menggunakan output json maka kita dapat mengirim data yang mudah diakses.
+
+Objek `res` mewakili respons HTTP yang dikirim oleh aplikasi Express saat mendapat permintaan HTTP.
+
+Dalam dokumentasi ini dan menurut konvensi, objek selalu dirujuk sebagai `res`(dan permintaan HTTPnya adalah `req`) tetapi nama sebenarnya ditentukan oleh parameter ke fungsi panggilan balik tempat Anda bekerja.
+
+Sebagai contoh:
+```js
+app.get('/user/:id', function (req, res) {
+  res.send('user ' + req.params.id)
+})
+```
+Di dalam route kita dapat mengirim response menggunakan parameter dari route express.js yaitu `res.Send()` untuk mengirim plain text ketika kita mengakses route tersebut.
+
+- Properties
+    - `res.app`
+    - `res.headersSent`
+    - `res.locals`
+- Methods
+    - `res.append()`
+    - `res.attachment()`
+    - `res.cookie()`
+    - `res.clearCookie()`
+    - `res.download()`
+    - `res.end()`
+    - `res.format()`
+    - `res.get()`
+    - `res.json()`
+    - `res.jsonp()`
+    - `res.links()`
+    - `res.location()`
+    - `res.redirect()`
+    - `res.render()`
+    - `res.send()`
+    - `res.sendFile()`
+    - `res.sendStatus()`
+    - `res.set()`
+    - `res.status()`
+    - `res.type()`
+    - `res.vary()`
+
+Documentation : http://expressjs.com/en/api.html#res
+### Status Code
+
+HTTP status code merupakan istilah umum yang digunakan untuk menyebut HTTP status line yang mencakup HTTP status code dan HTTP reason phase.
+
+Namun, kebanyakan pengguna internet menyebut kode status ini sebagai kode error browser atau kode error intenal server.
+
+Ini karena HTTP status line 500: Internal Server Error terdiri dari kode status HTTP 500 dan HTTP reason phase Internal Server Error.
+
+<b>Macam-Macam HTTP Status Code</b>
+
+Secara umum, terdapat lima kategori HTTP status code, yaitu 
+- kode respon informasi, 
+- respon sukses,
+- pengalihan,
+- kode error respon klien, dan kode error server.
+
+Namun, tidak semua kategori tersebut mengindikasi terjadinya kesalahan saat memuat website.
+
+Sebagian kode status dari beberapa kategori hanyalah indikasi dari respon yang diberikan server ketika memuat laman website.
+
+Namun, ada beberapa macam HTTP status code yang umum ditemukan.
+
+- Kode respon klien error (kode 4xx)
+    
+    - `400 Bad Request`
+        
+        Kode ini menunjukkan bahwa server tidak memahami permintaan dikarenakan syntax yang invalid.
+            
+    - `401 Unauthorized`
+        
+        HTTP status code ini adalah kode yang dikirim ketika permintaan tidak terautentifikasi. Sehingga, kamu harus melakukan autentikasi untuk mendapatkan respons yang diminta.
+            
+    - `402 Payment Required`
+        
+        Kode ini masih dalam pengembangan dan baru akan digunakan di masa mendatang.
+            
+        Tujuan awal pembuatan kode ini adalah menggunakannya untuk sistem pembayaran digital, namun kode status ini sangat jarang digunakan dan tidak ada ketentuan standar.
+            
+    - `403 Forbidden`
+            
+        Kode status ini biasanya muncul ketika kamu membuka sebuah laman yang tidak kamu miliki aksesnya. Berbeda dengan kode status 401, server akan mengidentifikasimu sebagai pengguna.
+            
+    - `404 Not Found`
+            
+        Kode ini adalah HTTP status code yang paling umum ditemukan. Di browser, ini berarti URL tidak dikenali.
+            
+        Server juga dapat mengirimkan kode respons ini alih-alih 403 untuk menyembunyikan keberadaan sumber daya dari klien yang tidak sah.
+            
+    - `408 Request Timeout`
+            
+        Kode ini dikirim pada koneksi yang tidak aktif oleh beberapa server, bahkan tanpa permintaan sebelumnya oleh klien.
+            
+        Artinya, server ingin mematikan koneksi yang tidak digunakan ini.
+
+Respons ini digunakan lebih banyak karena beberapa browser, seperti Chrome, Firefox 27+, atau IE9, menggunakan mekanisme pra-koneksi HTTP untuk mempercepat penjelajahan.
+
+- Kode respon server error (5xx)
+
+    - `500 Internal Server Error`
+    
+        HTTP status code ini adalah kode yang dikirimkan ketika server mengalami situasi yang tidak diketahui cara menanganinya.
+
+    - `502 Bad Gateway`
+    
+        Respons kesalahan ini berarti bahwa server, saat bekerja sebagai gateway untuk mendapatkan respons yang diperlukan untuk menangani permintaan, mendapat respons yang tidak valid.
+
+    - `503 Service Unavailable`
+    
+        Kode ini akan muncul ketika server tidak siap untuk menangani permintaan tersebut. Penyebab umumnya adalah server tidak aktif karena pemeliharaan atau kelebihan beban.
+
+    - `504 Gateway Timeout`
+    
+        Kode status ini akan muncul saat server bertindak sebagai gateway dan tidak bisa mendapatkan respons tepat waktu.
+
+    - `511 Network Authentication Required`
+    
+        Kode status 511 menunjukkan bahwa kamu perlu melakukan otentikasi untuk mendapatkan akses jaringan.
+
+Source : https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+### Query
+
+Query merupakan parameter yang digunakan untuk membantu menentukan tindakan yang lebih spesifik daripada hanya sekedar router biasa. Biasanya query ditaruh di akhir route dengan memberikan informasi diawali dengan “?” kemudian tedapat key dan data yang dapat ditindak lanjuti. `Ex : “?q=hello&age=23”` 
+
+Bagi yang sadar, ketika kita search di google maka terdapat query di route yang kita akses
+<br>![screenshot ExpressJS(4)](ExpressJS(4).PNG)
+### Nested route
+
+Nested route digunakan ketika terdapat banyak route yang memiliki nama yang sama atau ingin membuat route yang lebih mendalam
+
+### Express Middleware
+
+Apa Itu Middleware ?
+
+`Middleware function` adalah sebuah fungsi yang memiliki akses ke `object request (req)`, `object response (res)`, dan sebuah `fungsi next` didalam request-response cycle.
+
+>`Fungsi next` biasanya di berikan nama variable next.
+
+<br>![screenshot ExpressJS](/ExpressJS(5).PNG)
+<b>Bagaimana Cara Middleware Bekerja?</b>
+
+Secara umum, prinsip kerja Middleware adalah mencegat request yang masuk untuk kemudian diproses terlebih dahulu sebelum diberikan kepada Controller yang dituju atau diarahkan ke Controller yang lain. Dengan menggunakan fitur ini, kita dapat membuat komponen yang reusable untuk melakukan pekerjaan-pekerjaan tersebut.
+
+<b>Apa Saja Yang Bisa Dilakukan Oleh Function Middleware?</b>
+
+- Menjalankan kode apapun.
+- Memodifikasi Object Request dan Object Response.
+- Menghentikan request-response cycle.
+- Melanjutkan ke middleware function selanjutnya atau ke handler function dalam suatu request response cycle.
+
+<b>Jenis Express Middleware</b>
+
+- Berdasarkan Cara Penggunaan
+    - Application Level Middleware
+    - Router Level Middleware
+    - Error Handling Middleware
+- Berdasarkan Cara Penggunaan : Application Level Middleware
+    - Application Level Middleware adalah sebuh function middleware yang melekat ke instance object Application Express.
+    - Penggunaannya dengan cara memanggil method app.use().
+    - Application Level Middleware akan di jalankan setiap kali Express Application menerima sebuah HTTP Request.
+- Berdasarkan Cara Penggunaan : Router Level Middleware
+    - Router Level Middleware adalah sebuh function middleware yang cara kerjanya sama persis dengan application level middleware, yang menjadikan perbedaan adalah middleware function ini melekat ke instance object Router Express.
+    - Penggunaannya dengan cara memanggil method express.Router().
+    - Router Level Middleware hanya akan di jalankan setiap kali sebuah Express Router yang menggunakan middleware ini menerima sebuah HTTP Request, sedangan pada Router yang lain tidak akan dijalankan.
+- Berdasarkan Source Middleware Function
+    - Express Build-in Middleware
+        - express.static()
+        - express.json()
+        - express.urlEncoded()
+    - Third Party (custom) Middleware
 ## Design Database with MySQL
 ### Entity / Entitas
 >adalah kumpulan objek yang dapat diidetifikasikan secara unik atau berbeda. Biasanya simbol dari entitas adalah persegi panjang
@@ -294,3 +486,76 @@ npm install --save-dev nodemon
   >Primary key adalah sesuatu yang isinya tidak akan sama dengan yang lain. Contohnya NIM mahasiswa satu dengan mahasiswa lain tidak sama, pasti berbeda-beda
 2. Relationship/Relasi Entity Keseluruhan
 <br>![membuat flowchart](week-05-pict002.png)
+
+## Design Database With MySQL (Lanjutan)
+- ### Membuat design db data film kesukaan :
+- mahasiswa dapat menyukai banyak film
+<br>![image](Db_lanjutan(1).jpeg)
+
+- Mahasiswa dapat menyukai banyak film. tiap film memiliki informasi terkait genre, tiap film mempunyai banyak genre
+<br>![image](Db_lanjutan(2).jpeg)
+
+- ### Apa Itu Primary Key Dan Foreign Key Di SQL Database?
+- primary key adalah tanda pengenal unik yang membedakan satu record dari yang lain. Oleh karena itu, setiap record dalam SQL database management system harus memiliki primary key.
+
+    ada beberapa aturan yang harus kalian ikuti ketika menentukan primary key untuk tabel:
+    
+     - Primary key harus berisi nilai unik
+     - Kolom primary key tidak boleh berisi nilai NULL
+     - Sebuah tabel hanya memiliki satu primary key
+     
+
+- Foreign key adalah pengenal unik atau kombinasi pengenal unik yang menghubungkan dua tabel atau lebih dalam database.
+
+    Saat memutuskan tabel mana dalam database relasional yang harus memiliki foreign key, harus terlebih dahulu mengidentifikasi tabel mana yang merupakan subjek dan objek dalam hubungannya.
+
+- Perbedaan Primary Key Dan Foreign Key
+
+    - Tidak ada dua baris yang dapat memiliki value identik untuk primary key sedangkan Foreign key dapat berisi value duplikat.
+    
+    - Tidak ada batasan dalam memasukkan value ke dalam kolom tabel primary key ssedangkan Saat memasukkan value apa pun dalam tabelforeign key, pastikan bahwa value tersebut ada di kolom primary key.
+    
+    - dapat memiliki satu primary key dalam sebuah tabel sedangkan foreign key dapat memiliki beberapa dalam satu tabel.
+    
+ - Unnormalized Form
+
+    Unnormalized Form adalah suatu kondisi dimana sebuah tabel yang memiliki rangkap atau data yang terduplikasi.  Unnormalized Form ini sebenarnya adalah kumpulan data data mentah yang dimasukkan semua dalam satu tabel yang sama (tidak dipecah ke tabel lain). Data tersebut di input dengan apa adanya dan tidak dipilah sesuai dengan jenisnya.
+    
+
+  - NORMALISASI
+  
+    proses pengelompokan atribut data yang membentuk entitas sederhana, nonredundan, fleksibel, dan mudah beradaptasi, Sehingga dapat dipastikan bahwa database yang dibuat berkualitas baik.
+
+    
+  - 1nf
+     
+     Suatu relasi disebut memenuhi bentuk normal pertama (1NF) jika dan hanya jika
+setiap atribut dari relasi tersebut hanya memiliki nilai tunggal dan tidak ada
+pengulangan grup atribut dalam baris. Bentuk 1NF tidak boleh mengandung grup atribut yang berulang.
+ Tujuan membentuk 1N
+
+<br>![image1nf](1NF.jpeg)
+
+   - 2nf
+   
+   Suatu relasi disebut memenuhi bentuk normal kedua (2NF) jika dan hanya jika memenuhi 1NF, setiap atribut yang bukan kunci utama tergantung secara fungsional terhadap semua atribut kunci dan bukan hanya sebagian atribut kunci (fully functionally dependent).
+
+![image](2NF(1).jpeg)
+
+![image](2NF(2).jpeg)
+
+![image](2NF(3).jpeg)
+
+  - 3nf
+  
+  Suatu relasi disebut memenuhi bentuk normal ketiga (3NF) jika dan hanya jika memenuhi 2NF, setiap atribut yang bukan kunci tidak tergantung secara fungsional terhadap atribut bukan kunci yang lain dalam relasi tsb (tidak terdapat ketergantungan transitif pada atribut bukan kunci).
+  
+  Jika suatu relasi sudah memenuhi 2NF tapi tidak memenuhi 3 NF, maka untuk normalisasi ke bentuk 3NF, tabel 2NF didekomposisi menjadi beberapa tabel hingga masing-masing memenuhi 3NF. 
+  
+![image](3NF(1).jpeg)
+
+![image](3NF(2).jpeg)
+
+![image](3NF(3).jpeg)
+
+![image](3NF(4).jpeg)
