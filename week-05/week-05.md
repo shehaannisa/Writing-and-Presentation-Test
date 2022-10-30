@@ -431,7 +431,7 @@ Apa Itu Middleware ?
 >`Fungsi next` biasanya di berikan nama variable next.
 
 <br>![screenshot ExpressJS](ExpressJS(5).PNG)
-<b>Bagaimana Cara Middleware Bekerja?</b>
+<br><b>Bagaimana Cara Middleware Bekerja?
 
 Secara umum, prinsip kerja Middleware adalah mencegat request yang masuk untuk kemudian diproses terlebih dahulu sebelum diberikan kepada Controller yang dituju atau diarahkan ke Controller yang lain. Dengan menggunakan fitur ini, kita dapat membuat komponen yang reusable untuk melakukan pekerjaan-pekerjaan tersebut.
 
