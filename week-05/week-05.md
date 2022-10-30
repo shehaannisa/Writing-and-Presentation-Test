@@ -273,7 +273,7 @@ npm install --save-dev nodemon
 ### Basic Syntax ExpressJS
 
 ![screenshot ExpressJS](ExpressJS.PNG)
-diatas adalah basic syntax dari express JS. Kita akan menggunakan module express yang berisi routing dan listen.
+<br>diatas adalah basic syntax dari express JS. Kita akan menggunakan module express yang berisi routing dan listen.
 - Basic Routes
 
     Routes adalah sebuah end point yang diapat kita akses menggunakan URL di website. Didalam routes kita perlu menentukan method API, alamat dan response apa saja yang akan dikeluarkan
@@ -431,7 +431,7 @@ Apa Itu Middleware ?
 >`Fungsi next` biasanya di berikan nama variable next.
 
 <br>![screenshot ExpressJS](ExpressJS(5).PNG)
-<br><b>Bagaimana Cara Middleware Bekerja?
+<br><b>Bagaimana Cara Middleware Bekerja?<b/>
 
 Secara umum, prinsip kerja Middleware adalah mencegat request yang masuk untuk kemudian diproses terlebih dahulu sebelum diberikan kepada Controller yang dituju atau diarahkan ke Controller yang lain. Dengan menggunakan fitur ini, kita dapat membuat komponen yang reusable untuk melakukan pekerjaan-pekerjaan tersebut.
 
